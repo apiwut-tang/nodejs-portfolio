@@ -15,7 +15,7 @@ app.use(cors({
 
 app.use('/api',apiKeyAuth);
 
-
+app.get('/', (req, res) => res.send('Server Portfolio'))
 app.get('/api/get', (req, res) => res.send('Hello From Email'))
 app.post('/api/send-email', async (req, res) => {
     console.log(req.body)  
